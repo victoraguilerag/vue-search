@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
-import TheWelcome from "./components/TheWelcome.vue";
+  import HelloWorld from "./components/HelloWorld.vue";
+  // import TheWelcome from "./components/TheWelcome.vue";
+  import SearchBar from "./components/SearchBar/SearchBar.vue";
+  import ListContainer from "./components/List/ListContainer.vue";
 </script>
 
 <template>
@@ -14,40 +16,28 @@ import TheWelcome from "./components/TheWelcome.vue";
     />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="Vue Search" />
     </div>
   </header>
 
-  <main>
-    <TheWelcome />
+  <main class="container">
+    <SearchBar />
+    <ListContainer />
   </main>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
   header {
+    line-height: 1.5;
     display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
+  main {
+    height: 100vh;
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    flex-flow: column;
   }
-}
 </style>
