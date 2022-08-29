@@ -1,6 +1,6 @@
 <template>
   <li class="listItem">
-    <span>{{ text }}</span>
+    <span class="title">{{ text }}</span>
     <span class="type">{{ type }}</span>
   </li>
 </template>
