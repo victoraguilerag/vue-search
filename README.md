@@ -1,6 +1,10 @@
-# storyteq
+# Vue Search
 
-This template should help get you started developing with Vue 3 in Vite.
+Autocomplete project, it allows the user to input a string and receive any books/cities that match as a recommendation.
+
+It was develop using Vue 3 and Vuex. It has a couple UI components for the search experience and a store with two modules, one for books and another one for cities.
+
+The instructions to run the application are described in the "Project Setup" section.
 
 ## Recommended IDE Setup
 
