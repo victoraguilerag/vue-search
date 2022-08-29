@@ -4,13 +4,18 @@ import { mount } from "@vue/test-utils";
 import ListItem from "./ListItem.vue";
 
 describe("ListItem", () => {
-  it("renders properly", () => {
+  it("renders the title properly", () => {
     const wrapper = mount(ListItem, {
-      props: { text: "test text", type: "test type" },
+      props: { text: "test text" },
     });
     const title = wrapper.find(".title");
+    expect(title.text()).toContain("test type");
+  });
+  it("renders the description properly", () => {
+    const wrapper = mount(ListItem, {
+      props: { type: "test type" },
+    });
     const description = wrapper.find(".type");
-    expect(title.text()).toContain("test text");
     expect(description.text()).toContain("test type");
   });
 });
