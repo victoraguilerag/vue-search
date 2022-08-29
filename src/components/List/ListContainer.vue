@@ -4,10 +4,10 @@
   export default {
     computed: {
       ...mapState({
-        foundBooks: (state) => state.books.searchResults,
-        books: (state) => state.books.items,
-        foundCities: (state) => state.cities.searchResults,
-        cities: (state) => state.cities.items,
+        foundBooks: (state: any) => state.books.searchResults,
+        books: (state: any) => state.books.items,
+        foundCities: (state: any) => state.cities.searchResults,
+        cities: (state: any) => state.cities.items,
       }),
     },
     methods: {

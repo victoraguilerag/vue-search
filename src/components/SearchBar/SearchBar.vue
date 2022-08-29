@@ -5,13 +5,13 @@
 <script lang="ts">
   import { mapActions, mapState } from "vuex";
   export default {
-    data() {
+    data: () => {
       return { input: "" };
     },
     computed: {
       ...mapState({
-        books: (state) => state.books.results || state.books.items,
-        cities: (state) => state.books.results || state.cities.items,
+        books: (state: any) => state.books.results || state.books.items,
+        cities: (state: any) => state.books.results || state.cities.items,
       }),
     },
     actions: {
@@ -19,10 +19,10 @@
     },
     methods: {
       onChange() {
-        if (this.input.length >= 3) {
-          this.$store.dispatch("search", this.input);
+        if ((this as any).input.length >= 3) {
+          (this as any).$store.dispatch("search", (this as any).input);
         } else {
-          this.$store.dispatch("search", " ");
+          (this as any).$store.dispatch("search", " ");
         }
       },
     },
